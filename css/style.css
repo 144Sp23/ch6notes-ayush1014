@@ -1,6 +1,6 @@
 /*
-Author: Diana Linville
-Date: 5-16-22
+Author: Ayush Kanaujia
+Date: 3-1-23
 File name: style.class*/
 /*CSS Reset */
 body, header, nav, main, footer, h1, div, img, ul {
@@ -26,7 +26,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #000;
-  height: 190px;
+  height: 170px;
 }
 
 header img {
@@ -146,11 +146,53 @@ footer p a {
   height: 50%;
 }
 
-/*
-#exercises {
+
+/*Media Query for Tablet viewport*/
+@Media screen and (min-width: 630px){
+
+
+
+/*Tablet viewport: Show tablet-desktop class, hide mobile class*/
+.tablet-desktop{
+  display: block;
+}
+
+.mobile{
+  display: none;
+}
+
+/*Tablet viewport: style rule for header*/
+header{
+  position: static;
+  padding-bottom: 2%;
+}
+
+/*Tablet viewport: styles rule for nav area*/
+nav li{
+  border-top: none;
+  display: inline-block;
+  border-right: 1px solid #fff;
+    }
+
+nav li:last-child{
+  border-right: none;
+}
+main{
   clear: left;
+}
+
+nav li a{
+  padding: 0.1em 0.75em;
+}
+
+/*Tablet viewport: style rules for main content areas */
+main ul{
+  margin: 0 0 4% 10%;
+}
+#exercises {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+  background: linear-gradient(to right, #ccc, #fff);
   background-color: #f2f2f2;
   padding: 1% 2%;
 }
@@ -161,4 +203,90 @@ footer p a {
 
 #exercises dd {
   padding: 0.5% 1% 2% 0;
-} */
+}
+
+.tel-num{
+  font-size: 1.75em;
+}
+
+.map{
+  width: 600px;
+  height: 450px;
+}
+
+}
+
+/*Media Query for Desktop viewport*/
+@media screen and (min-width: 1015px){
+
+  /*Desktop viewport: style rule for header*/
+  header{
+    width:25%;
+    float: left;
+    padding-bottom: 0;
+  }
+
+  /*Desktop viewport: style rules for nav area*/
+  nav{
+    float: right;
+    width: 70%;
+    margin: 4em 1em 0 0;
+  }
+
+  nav ul{
+    text-align: right;
+  }
+
+  nav li{
+    border: none;
+  }
+
+
+  nav li a{
+    padding: 0.5em 1em;
+  }
+
+  nav li a:hover{
+    color: #000;
+    background-color: #fff;
+  }
+
+  /*Desktop viewport: style rules for main content*/
+  main{
+    clear: left;
+  }
+
+  main h1{
+    font-size: 1.8em;
+  }
+
+  #weights, #cardio, #training{
+    width: 29%;
+    float: left;
+    margin: 0 2%;
+  }
+
+  #exercises{
+    clear: left;
+  }
+}
+
+
+/*Media Query for large Desktop viewports*/
+@media screen and (min-width: 1921px){
+
+  #container {
+    width: 1920px;
+    margin: 0 auto;
+
+  }
+}
+
+/*Media Query for print*/
+@media print{
+  body{
+    background-color: #fff;
+    color: #000;
+  }
+
+}
